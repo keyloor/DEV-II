@@ -4,5 +4,6 @@ public class Main {
         BankApp app = new BankApp(acc);
 
         app.showMenu();
+        
     }
 }
