@@ -10,3 +10,4 @@ enum: tipo de dato especial que representa un conjunto fijo de valores constante
 
 Si alguna clase tiene el final no se permite extender con herencia
 
+SOLID
