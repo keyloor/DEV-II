@@ -11,7 +11,7 @@ public class Lector {
         //We ask for an Input
         System.out.print(msg);
         String mail = sc.nextLine();
-
+        
         //We check if the mail works
         if(Validador.validate(mail)) {
             System.out.println("Mail registered successfully");   
