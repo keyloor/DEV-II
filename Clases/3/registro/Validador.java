@@ -3,7 +3,8 @@
 public class Validador {
     public static boolean validate(String mail) {
         return mail.contains("@") && mail.contains(".");
+        
     }
 
-    
+
 }
