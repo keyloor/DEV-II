@@ -68,7 +68,6 @@ public class PetManager {
                 return true;
             }
         }
-
         return false;
     }
 
