@@ -1,24 +1,24 @@
 public class Person {
     private String name;
     private int age;
-    private PetManager pets;
+    private PetManager petManager;
 
     public Person(String name, int age, int numberOfPets) {
         this.name = name;
         this.age = age;
-        pets = new PetManager(numberOfPets);
+        petManager = new PetManager(numberOfPets);
     }
 
     public PetManager getPetManager() {
-        return pets;
+        return petManager;
     }
 
     public boolean addPet(Pet pet) {
-        return pets.addPet(pet); 
+        return petManager.addPet(pet); 
     }
 
-    public void setPets(PetManager pets) {
-        this.pets = pets;
+    public void setPetManager(PetManager petManager) {
+        this.petManager = petManager;
     }
 
     public int getAge() {
