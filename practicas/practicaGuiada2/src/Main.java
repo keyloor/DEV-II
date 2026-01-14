@@ -12,27 +12,41 @@ public class Main {
         // System.out.println(person.getPets()[0].getPetName());
         // System.out.println(person.getPets()[1].getPetName());
         
-        //Agregamos pets
-        if(person.addPet(new Pet("Mijaus", "Cat"))) {
+        //Agregamos unos pets
+        Pet mijaus = new Pet("Mijaus", "Cat");
+        Pet mijausJr = new Pet("Mijaus Jr", "Cat");
+
+        if(person.addPet(mijaus)) {
             IOManager.printMessage("Pet addded successfully.");
         } else {
             IOManager.printMessage("Failed to add pet.");
         }
 
-        if(person.addPet(new Pet("Mijaus Jr", "Cat"))) {
+        if(person.addPet(mijausJr)) {
             IOManager.printMessage("Pet addded successfully.");
         } else {
             IOManager.printMessage("Failed to add pet.");
         }
+
+        //Quitamos un pet
+        if(person.removePet(mijausJr)) {
+            IOManager.printMessage("Pet removed successfully.");
+        } else {
+            IOManager.printMessage("Failed to remove pet.");
+        }
         
-        //Con iterador
+        //Mostrar los pets
         IOManager.printMessage("\nPets: ");
-        
-        for (Pet pet : person.getPetManager().getPets()) {
-            if(pet != null) {
-                IOManager.printMessage(pet.getPetName());
+
+        if(person.getPets().length == 0) {
+            IOManager.printMessage("No pets found.");
+        } else {
+            for (Pet pet : person.getPets()) {
+                IOManager.printMessage(pet.getPetName());  
             }
         }
+        
+        
         
 
         

@@ -17,6 +17,15 @@ public class Person {
         return petManager.addPet(pet); 
     }
 
+    public boolean removePet(Pet pet) {
+        return petManager.removePet(pet);
+    }
+
+    public Pet[] getPets() {
+        return petManager.getPets();
+    }
+
+
     public void setPetManager(PetManager petManager) {
         this.petManager = petManager;
     }
