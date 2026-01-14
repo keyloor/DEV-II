@@ -1,21 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        // int[] numbers = {10, 20, 30, 40, 50};
-        // String[] fruits = new String[3];
-
-        // System.out.println(numbers[2] + " | " + fruits[2]);
-
+        //Agregamos una persona
         Person person = new Person("Charlie", 23, 2);
-
-        //Sin iterador
-        // System.out.println("Sin iterador: ");
-        // System.out.println(person.getPets()[0].getPetName());
-        // System.out.println(person.getPets()[1].getPetName());
         
         //Agregamos unos pets
         Pet mijaus = new Pet("Mijaus", "Cat");
         Pet mijausJr = new Pet("Mijaus Jr", "Cat");
 
+        //Agregamos el pet
         if(person.addPet(mijaus)) {
             IOManager.printMessage("Pet addded successfully.");
         } else {
@@ -34,7 +26,14 @@ public class Main {
         } else {
             IOManager.printMessage("Failed to remove pet.");
         }
-        
+
+        //Reemplazamos un pet
+        if(person.updatePet(mijausJr, 0)) {
+            IOManager.printMessage("Pet updated successfully.");
+        } else {
+            IOManager.printMessage("Failed to update pet.");
+        }
+
         //Mostrar los pets
         IOManager.printMessage("\nPets: ");
 
@@ -44,6 +43,7 @@ public class Main {
             for (Pet pet : person.getPets()) {
                 IOManager.printMessage(pet.getPetName());  
             }
+
         }
         
         

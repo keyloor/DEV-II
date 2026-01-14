@@ -12,13 +12,17 @@ public class Person {
     public PetManager getPetManager() {
         return petManager;
     }
-
+    
     public boolean addPet(Pet pet) {
         return petManager.addPet(pet); 
     }
 
     public boolean removePet(Pet pet) {
         return petManager.removePet(pet);
+    }
+
+    public boolean updatePet(Pet pet, int index){
+        return petManager.updatePet(pet, index);
     }
 
     public Pet[] getPets() {

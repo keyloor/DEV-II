@@ -1,7 +1,7 @@
 public class PetManager {
     //Contador
     private int size;
-    private Pet[] pets;
+    private static Pet[] pets;
 
     public PetManager(int numberOfPets) {
         pets = new Pet[numberOfPets];
@@ -22,6 +22,7 @@ public class PetManager {
         return false;
     }
 
+    //Cuando se obtienen los pets solo se obtiene un array sin nulls
     public Pet[] getPets() {
         Pet[] pets = new Pet[this.size];
 
@@ -30,6 +31,23 @@ public class PetManager {
         }
 
         return pets;
+    }
+
+    //Se encarga de hacer crecer el arreglo de pets
+    public static void grow(){
+        //Se crea un nuevo tamaño con el doble del original
+        int newLen = pets.length * 2;
+
+        //Se crea el array temporal con el nuevo tamaño
+        Pet[] sizedPets = new Pet[newLen];
+        
+        //Se itera el array original para ponerle los valores al nuevo
+        for(int i = 0; i < pets.length; i++){
+            sizedPets[i] = pets[i];
+        }
+        
+        //El viejo pasa a ser el nuevo, mismos valores distinto tamaño
+        pets = sizedPets;
     }
 
 
@@ -60,6 +78,17 @@ public class PetManager {
 
     public void setPets(Pet[] pets) {
         this.pets = pets;
+    }
+
+    public boolean updatePet(Pet pet, int index) {
+        //Se revisa el pet y el indice
+        if(pet != null && index >= 0 && index < size) {
+            //Se reemplaza el pet
+            pets[index] = pet;
+            return true;
+        }
+
+        return false;
     }
 
     
