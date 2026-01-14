@@ -26,6 +26,14 @@ public class PetManager {
         return false;
     }
 
+    public int getSize() {
+        return size;
+    }
+
+    public void setPets(Pet[] pets) {
+        this.pets = pets;
+    }
+
     
 
 }
