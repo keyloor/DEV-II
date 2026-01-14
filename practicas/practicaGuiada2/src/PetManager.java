@@ -10,7 +10,7 @@ public class PetManager {
     public Pet[] getPets() {
         return pets;
     }
-
+    
     public boolean addPet(Pet pet) {
         //Iteramos el arreglo en busca de un slot vacio
         for (int i = 0; i < pets.length; i++) {
