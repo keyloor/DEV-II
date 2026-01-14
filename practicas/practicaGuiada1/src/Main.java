@@ -16,7 +16,7 @@ public class Main {
         // System.out.println(person.getPets()[2].getPetName());
         // System.out.println(person.getPets()[3].getPetName());
         // System.out.println(person.getPets()[4].getPetName());
-
+        
         //Con iterador
         IOManager.printMessage("\nCon iterador: ");
         for (Pet pet : person.getPetManager().getPets()) {
