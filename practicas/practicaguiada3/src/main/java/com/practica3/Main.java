@@ -1,25 +1,15 @@
 package com.practica3;
 
-import java.io.FileReader;
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 public class Main {
     public static void main(String[] args) {
 
-        Gson gson = new Gson();
+        // File Manager
+        PersonFileManager manager = new PersonFileManager();
+        Person p1 = new Person("Keylooooor", 18, true, 12123);
 
-        // Crear objeto Person
-        Person person = new Person("Keylor", 18, true, 1);
+        System.out.println(manager.readAll());
 
-        // Serializar a JSON en memoria
-        String json = gson.toJson(person);
-        System.out.println(json);
 
         // Escribir un objeto Person en un archivo JSON
         /*
@@ -41,17 +31,17 @@ public class Main {
         */
 
         // Leer una lista de Person desde un archivo JSON
-        try (FileReader reader = new FileReader("person.json")) {
+        // try (FileReader reader = new FileReader("person.json")) {
 
-            Type type = new TypeToken<ArrayList<Person>>() {}.getType();
-            List<Person> people = gson.fromJson(reader, type);
+        //     Type type = new TypeToken<ArrayList<Person>>() {}.getType();
+        //     List<Person> people = gson.fromJson(reader, type);
 
-            for (Person p : people) {
-                System.out.println(p.getName());
-            }
+        //     for (Person p : people) {
+        //         System.out.println(p.getName());
+        //     }
 
-        } catch (IOException e) {
-            System.out.println("Error al leer el archivo");
-        }
+        // } catch (IOException e) {
+        //     System.out.println("Error al leer el archivo");
+        // }
     }
 }
