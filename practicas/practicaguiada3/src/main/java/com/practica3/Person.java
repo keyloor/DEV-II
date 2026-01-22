@@ -4,17 +4,17 @@ public class Person {
     private String name;
     private int age;
     private boolean isStudent;
+    private final int id;
 
     public Person() {
-        name = "null";
-        age = -1;
-        isStudent = false;
+        this.id = 0;
     }
 
-    public Person(String name, int age, boolean isStudent) {
+    public Person(String name, int age, boolean isStudent, int id) {
         this.name = name;
         this.age = age;
         this.isStudent = isStudent;
+        this.id = id;
     }
 
     public boolean isIsStudent() {
@@ -48,6 +48,10 @@ public class Person {
                 ", age=" + age +
                 ", isStudent=" + isStudent +
                 '}';
+    }
+
+    public int getId() {
+        return id;
     }
 
     

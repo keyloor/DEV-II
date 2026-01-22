@@ -15,7 +15,7 @@ public class Main {
         Gson gson = new Gson();
 
         // Crear objeto Person
-        Person person = new Person("Keylor", 18, true);
+        Person person = new Person("Keylor", 18, true, 1);
 
         // Serializar a JSON en memoria
         String json = gson.toJson(person);
