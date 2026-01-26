@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Keylor",
+    "age": 30,
+    "isStudent": true,
+    "id": 0
+  },
+  {
+    "name": "Pedro",
+    "age": 33,
+    "isStudent": false,
+    "id": 0
+  },
+  {
+    "name": "Ana",
+    "age": 22,
+    "isStudent": true,
+    "id": 1
+  },
+  {
+    "name": "Keylooooor",
+    "age": 18,
+    "isStudent": true,
+    "id": 12123
+  }
+]
