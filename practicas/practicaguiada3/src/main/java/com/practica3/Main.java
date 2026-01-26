@@ -7,6 +7,7 @@ public class Main {
         // File Manager
         PersonFileManager manager = new PersonFileManager();
         Person p1 = new Person("Keylooooor", 18, true, 12123);
+        System.out.println(p1.getAge());
 
         System.out.println(manager.readAll());
 
