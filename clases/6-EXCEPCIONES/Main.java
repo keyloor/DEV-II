@@ -1,5 +1,3 @@
-
-
 public class Main{
     public static void main(String[] args) {
         
@@ -27,8 +25,14 @@ public class Main{
 
         //- PRACTICA
         UserService u = new UserService();
+        
+        try {
+            u.registerUser(121);
 
-        u.registerUser(121);
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getLocalizedMessage());
+        }
+        
 
 
     }
