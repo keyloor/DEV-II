@@ -1,0 +1,21 @@
+/*Por clase*/
+.title {
+    font-size: large;
+}
+
+/*Por etiqueta*/
+h1 {
+    color: red;
+}
+
+/*Por id*/
+#texto {
+    color: rgb(39, 105, 105);
+}
+
+/*Por atributo*/
+
+[type] {
+    border: 3px solid blue;
+}
+
