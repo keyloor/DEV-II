@@ -2,8 +2,8 @@
 import java.util.Scanner;
 
 public class BankApp {
-    private BankAccount account;
 
+    private BankAccount account;
 
     public BankApp(BankAccount account) {
         this.account = account;
@@ -14,7 +14,7 @@ public class BankApp {
         int option;
         Scanner sc = new Scanner(System.in);
 
-        while(active) {
+        while (active) {
 
             System.out.println("""
                                - Select an option: \r
@@ -43,12 +43,9 @@ public class BankApp {
                 default:
                     throw new AssertionError();
             }
-            
+
         }
 
     }
-
-    
-
 
 }
