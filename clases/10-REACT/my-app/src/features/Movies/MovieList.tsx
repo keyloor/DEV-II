@@ -1,10 +1,28 @@
+import type { Movie } from "../../models/movie.model";
 import { MovieCard } from "./MovieCard";
 
-export function MovieList() {
+export default function MovieList() {
+    const movies: Movie[] = [
+        {
+            id: "1",
+            title: "The Batman",
+            description: "First Batman Movie."
+        },
+
+        {
+            id: "2",
+            title: "Movie",
+            description: "New movie."
+        }
+        
+    ];
+
+
     return(
-        <>
-            <h1>MovieList</h1>
-            <MovieCard />
-        </>
+        <div>
+            {movies.map(movie =>(
+                <MovieCard key = {movie.id} {...movie}/>
+            ))}
+        </div>
     );
 }
