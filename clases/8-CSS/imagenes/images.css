@@ -1,24 +1,35 @@
 img {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
+
+
+}
+
+* {
+  border-width:0.3cm;
+  border-style: groove;
+  font-family: Arial;
+  text-align: center;
+  font-weight: 1000;
+  
 }
 
 #blue {
-    color: blue;
+  color: blue;
 }
 
 #red {
-    color: red;
+  color: red;
 }
 
 #orange {
-    color: orange;
+  color: orange;
 }
 
 #green {
-    color: green;
+  color: green;
 }
 
 #yellow {
-    color: yellow;
+  color: yellow;
 }
